@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style type="text/css">
+        @import url(beleza.css);
+    </style>
+</head>
+<body>
+
+    <h1 id="tt">Login</h1>
+    <div class="campo">
+        <label for="nome"><strong>E-mail:</strong></label>
+        <input type="email" name="email" id="email" placeholder="Digite seu E-mail..." required>
+    </div>
+    <div class="campo">
+        <label for="senha"><strong>Senha: </strong></label>
+        <input type="password" name="senha" id="senha" placeholder="Digite sua senha..." required>
+    </div>
+
+
+    <fieldset class="grupo">
+
+    <button id="bLogar" onclick="login()">Confirma</button>
+    <a href=""><button id="bEqcSenha">Esqueci minha senha</button></a>
+    <a  href="T2-cadastro.html"><button id="cadastrar">Quero fazer meu cadastro</button></a>
+    </fieldset>
+    <script src="script.js"></script>
+</body>
+</html>

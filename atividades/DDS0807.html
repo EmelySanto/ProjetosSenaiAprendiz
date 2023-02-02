@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cadastro de alunos!!</h1>
+    <h4><button onclick="cadastro()">cadastrar</button><button onclick="delet()">Deletar aluno</button></h4>
+    <h3>Alunos:</h3>
+    
+    <div id="ai">Alunos</div>
+</body>
+</html>
+<script>
+    var turma=[];
+    var pox=1;
+    function cadastro() {
+        
+     var nome= prompt("DIgite o nome!");
+     var matricula=pox;
+     var idade=Number(prompt("DIgite a idade do aluno "+nome));
+     criaAluno(nome,matricula,idade);
+     
+    }
+    function criaAluno(nome,matricula,idade) {
+        var aluno=new Object();
+        aluno.nome=nome;
+        aluno.idade=idade;
+        aluno.matricula=matricula;
+        turma.push(aluno);
+        pox++;
+        exibelista();
+    }
+    function delet() {
+        num=Number(prompt("DIgite o numero da matricula do aluno!"))
+        for(aluno of turma){
+            if(aluno.matricula ==num ){
+                turma.pop(aluno);
+                break;
+
+            }
+        }
+        exibelista();
+    }
+    function exibelista() { 
+        var resp="";
+        for(aluno of turma){
+           resp+="Nome: "+aluno.nome+" Idade: "+aluno.idade+ " Matricula: "+aluno.matricula+"<br>"
+        }
+        document.getElementById("ai").innerHTML= resp;
+    }
+
+</script>

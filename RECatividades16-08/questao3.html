@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+</head>
+
+<body>
+    Digite o salário<input type="number" id="salario" placeholder="Digite 0 para parar"><br>
+    Digite a quantidade de filhos<input type="number" id="numfilho"><br>
+    <button onclick="calc()">Confirmar</button>
+    <br>
+    <div id="d"></div>
+
+    <script>
+        var quantpessoas = 0
+        var mediafilho = 0, totalfilho = 0, mediasalario = 0, maiorsalario = 0
+        function calc() {
+            var salario = parseInt(document.getElementById("salario").value)
+            var numfilho = parseInt(document.getElementById("numfilho").value)
+            var mostrar
+            if (salario != 0) {
+                mediafilho += numfilho
+                mediasalario += salario
+                quantpessoas++
+                if (salario > maiorsalario) {
+                    maiorsalario = salario
+                } else { }
+                document.getElementById("numfilho").value = null
+                document.getElementById("salario").value = null
+            } else {
+                mediasalario = mediasalario / quantpessoas
+                mediafilho = mediafilho / quantpessoas
+                mostrar = "A quantidade de pessoas cadastradas foi de:" + quantpessoas + "<br>A média do salario é de:R$" + mediasalario +
+                    "<br>A média de filhos é de:" + mediafilho.toFixed(0) + " filhos<br>O maior salário registrado foi de:R$" + maiorsalario
+
+                document.getElementById("d").innerHTML = mostrar
+            }
+        }
+    </script>
+
+</body>
+
+</html>

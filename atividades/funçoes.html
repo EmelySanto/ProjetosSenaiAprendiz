@@ -1,0 +1,111 @@
+
+[83] - FUNÇÕES ARRAYS E STRING
+GUSTAVO ROBERTO DE SOUZA
+•
+23 de jun. Editado às 15:42
+100 pontos
+Exercício
+
+8.8.png
+Imagem
+
+8.14.png
+Imagem
+
+funcoes.html
+HTML
+
+8.8.html
+HTML
+
+8.14.html
+HTML
+Comentários da turma
+Seus trabalhos
+Devolvido
+
+Raciocinio-logico.html
+HTML
+Comentários particulares
+Entregando…
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+
+<body>
+    <script>
+
+        // FUNÇÕES DOS ARRAYS/VETORES
+        var teste = [1, 2, 3, 4, 5]
+        var teste2 = [9, 8, 7, 6]
+        var nomes = ["GUSTAVO", "MARIA", "JOÃO", "GABRIEL", "ANDRÉ", "ANA"]
+
+        document.write("VETOR 1 - " + teste + "<br>")
+        document.write("VETOR 2 - " + teste2 + "<br>")
+
+        var teste3 = teste.concat(teste2); // CONCATENA/JUNTA DOIS VETORES
+        document.write("CONCATENAÇÃO - " + teste3 + "<br>")
+
+        var teste4 = nomes.indexOf("MARIA"); // RETORNA A POSIÇÃO DE UM ELEMENTO     
+        document.write("INDEXOF -  " + teste4 + "<br>")
+
+        var teste5 = nomes.lastIndexOf("MARIA"); // RETORNA A POSIÇÃO DA ULTIMO ELEMENTO
+        document.write("LASTINDEXOF - " + teste5 + "<br>")
+
+        var teste6 = teste.join(); // TRANSFORMA O ARRAY INTEIRO EM UM STRING
+        document.write("JOIN() " + teste6 + "<br>")
+
+        var teste7 = teste.join(" | "); // ADICIONA UM SEPARADOR ENTRE OS ELEMENTOS
+        document.write("JOIN(INFO) " + teste7 + "<br>")
+
+        var teste8 = teste.pop(); // REMOVE E RETORNA A ULTIMA DO VETOR
+        document.write("POP " + teste + "<br>")
+
+        var teste9 = teste.push(123); // ADICIONAR VALORES A UM VETOR
+        document.write("PUSH - " + teste + "<br>")
+
+        var teste10 = teste.reverse(); // INVERTE OS ELEMENTOS DO MEU VETOR
+        document.write("REVERSE - " + teste + "<br>")
+
+        var teste11 = teste.shift();// REMOVE O PRIMEIRO ELEMENTO
+        document.write("SHIFT - " + teste + "<br>")
+
+        var teste12 = teste.unshift(500); // ADICIONA ELEMENTO NA PRIMEIRA POSIÇÃO
+        document.write("UNSHIFT - " + teste + "<br>")
+
+        teste.sort(); //FAZ A ORDENAÇÃO (CRESCENTE) DO VETOR
+        nomes.sort(); // FAZ A ORDENAÇÃO (CRESCENTE) DO VETOR
+        document.write("SORT - " + teste + "<br>")
+        document.write("SORT - " + nomes + "<br>")
+
+        var teste13 = teste.slice(0, 3); // RETORNO UMA PEQUENA PARTE DO VETOR
+        var teste14 = nomes.slice(0, 3);
+        document.write("SLICE - " + teste13 + "<br>")
+        document.write("SLICE - " + teste14 + "<br>")
+
+        // SPLICE
+        nomes.splice(0, 2, "LEANDRO");
+        document.write("SPLICE - " + nomes + "<br>")
+        nomes.splice(0, 0, "JOSÉ")
+        document.write("SPLICE - " + nomes + "<br>")
+        // vetor.splice(A PARTIR DA ONDE, QUANDOS ELEMENTOS APAGAR, [NOVOS ELEMENTOS]);
+
+
+        // FUNÇÕES DAS STRINGS
+        var teste15 = "SÃO JOSE -SC    ";
+        document.write("UperCase - " + teste15.toUpperCase() + "<br>")
+        document.write("LowerCase - " + teste15.toLowerCase() + "<br>")
+        document.write("Split - " + teste15.split("-") + "<br>")
+        document.write("TRIM - " + teste16.trim() + "<br>")
+        document.write("REPLACE - " + teste16.replace("J", "bla") + "<br>")
+        document.write("SUBSTRING - " + teste16.substring(4, 7) + "<br>")
+    </script>
+</body>
+
+</html>

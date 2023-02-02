@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Quantidade de maçãs em kg<input type="number" id="maca"><br>
+    Quantidade de morango em kg<input type="number" id="morango">
+    <button onclick="calc()">Confirmar</button>
+    <br>
+    <div id="d"></div>
+    <script>
+        function calc() {
+            var morango = parseInt(document.getElementById("morango").value)
+            var maca = parseInt(document.getElementById("maca").value)
+            var totalpeso = morango + maca
+            if (maca > 5) { macapreco = maca * 1.5 } else { macapreco = maca * 1.8 }
+            if (morango > 5) { morangopreco = morango * 2.2 } else { morangopreco = morango * 2.5 }
+            var totalpreco = morangopreco + macapreco
+            if (totalpeso > 8 || totalpreco > 25) {
+                totalpreco = totalpreco * 0.90
+            } else { }
+            document.getElementById("d").innerHTML = "O preço total a se pagar é:R$ " + totalpreco
+        }
+    </script>
+</body>
+
+</html>

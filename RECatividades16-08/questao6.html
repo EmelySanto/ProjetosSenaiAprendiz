@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao 6</title>
+</head>
+
+<body>
+    <h1>Questao 6</h1>
+    Digite o numero da sua conta!!<input type="number" id="Nconta"><br>
+    Digite seu saldo!!<input type="number" id="saldo"><br>
+    Digite seu debito atual!!<input type="number" id="deb"><br>
+    Digite seu credito atual!!<input type="number" id="cred">
+    <button onclick="questao6()">Calcular</button>
+    <h3>Impressao</h3>
+    <div id="div"></div>
+</body>
+
+</html>
+<script>
+    function questao6() {
+        var Nconta = document.getElementById("Nconta").value
+        var saldo =  parseInt(document.getElementById("saldo").value)
+        var debito = document.getElementById("deb").value
+        var credito = parseInt(document.getElementById("cred").value) 
+        var sAtual = Number
+        sAtual = (saldo - debito) + credito
+        situaçao = ""
+        if (sAtual > 0) {
+            situaçao = "seu saldo esta positivo++"
+        } else {
+            if(sAtual < 0){
+                situaçao="Seu saldo esta negativo--"
+            }
+        }
+        var mostrar= "Conta: "+Nconta+"-00<br>Saldo atual é: R$"+sAtual+",00 <br>Situaçao da sua conta: "+situaçao;
+        document.getElementById("div").innerHTML=mostrar
+    }
+</script>

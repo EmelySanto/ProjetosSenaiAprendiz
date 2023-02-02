@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao 4</title>
+</head>
+<body>
+    <h1>Questao 4</h1>
+    digite sua idade em anos! <input type="number" id="anos"><br>
+    digite sua idade em meses!<input type="number" id="meses"><br>
+    digite sua idade em dias! <input type="number" id="dias">
+    <button onclick="questao4()">Calcular</button>
+    <div id="div"></div>
+</body>
+</html>
+<script>
+    function questao4(){
+     var anos = document.getElementById("anos").value
+     var meses= document.getElementById("meses").value
+     var dias = document.getElementById("dias").value
+     var calculo1= (anos * 365)+(meses * 30)+dias
+     var idade= "Sua idade em dias é: "+calculo1+" dias"
+     document.getElementById("div").innerHTML = idade;
+     
+    }
+</script>

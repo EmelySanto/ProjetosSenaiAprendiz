@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 5</title>
+</head>
+
+<body>
+    Quantas horas você trabalhou essa Mês?<input type="number" id="horas"><br>
+    Quanto você ganha por hora trabalhada?<input type="number" id="salariohora"><br>
+    <button onclick="calc()">Confirmar</button>
+    <div id="a"></div>
+    <script>
+        function calc() {
+            var horasmes = document.getElementById("horas").value
+            var salariohora = parseInt(document.getElementById("salariohora").value)
+            var salariototal = 0, horasmais = 0, acrescimo = 0, horas
+
+            horas = horasmes / 4
+
+            if (horas > 40) {
+                for (var i = 0; i < 4; i++) {
+                    horasmais = horas - 40
+                    acrescimo = salariohora * 0.5
+                    salariosemana = (40 * salariohora) + (horasmais * (salariohora + acrescimo))
+
+                    salariototal = salariototal + salariosemana
+                }
+            } else { salariototal = salariohora * horasmes }
+
+            document.getElementById("a").innerHTML = "Seu salário total é de:R$" + salariototal
+
+        }
+
+    </script>
+
+</body>
+
+</html>

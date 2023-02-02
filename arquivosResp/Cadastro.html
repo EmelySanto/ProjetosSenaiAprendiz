@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table class="table table-sm table-bordered" id="tabela">
+        <thead>
+            <tr>
+                <th style='width: 150px;'>
+                    <input id='mat' type='number' placeholder='Matrícula' style='width: 100px;'>
+                </th>
+                <th style='width: 400px;'>
+                    <input id='nome' type='text' placeholder='Nome' style='width: 400px;'>
+                </th>
+                <th style='width: 400px;'>
+                    <input id='senha' type='password' placeholder='Senha' style='width: 400px;'>
+                </th>
+                <th>
+                    <input type="radio" name="sexo" id="m">Masculino</input>&emsp;&emsp;
+                    <input type="radio" name="sexo" id="f">Feminino</input>&emsp;&emsp;
+                    <input type="radio" name="sexo" id="ni">Não Informar</input>
+                </th>
+                <th>
+                    <button onclick="cadastro()" class="btn-success">Cadastrar</button>
+                </th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+
+</html>
+<script src="script.js"></script>

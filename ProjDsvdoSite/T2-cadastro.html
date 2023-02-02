@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <style type="text/css">
+        @import url(beleza.css);
+    </style>
+
+</head>
+
+<body >
+    
+    <h1 id="ttl">Complete com suas informaçoes:</h1><br><br>
+    <p id="sttl">Preencha todos os campos</p><br>
+
+    <fieldset class="grupo">
+        <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+        <div class="campo">
+            <label for="nome"><strong>Nome</strong></label>
+            <input type="text" name="nome" id="nome" placeholder="Digite seu Nome..." required>
+        </div>
+
+        <!-- Campo do sobrenome com legenda "sobrenome" e css de classe "campo" -->
+        <div class="campo">
+            <label for="sobrenome"><strong>Sobrenome</strong></label>
+            <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite seu Sobrenome..." required>
+        </div>
+    </fieldset>
+
+    <fieldset class="grupo">
+    <!-- Campo de email com-->
+    <div class="campo">
+        <label for="email"><strong>Email</strong></label>
+        <input type="email" name="email" id="email" placeholder="Digite seu E-mail..." required>
+    </div>
+
+    <!-- confirma email -->
+    <div class="campo">
+        <label for="confemail"><strong>Confirma Email</strong></label>
+        <input type="email" name="email" id="confEmail" placeholder="Confirme seu E-mail..." required>
+    </div>
+    <!-- telefone -->
+    <div class="campo">
+        <label for="tel"><strong>Telefone</strong></label>
+        <input type="number" name="tel" id="tel" placeholder="Digite seu Telefone..." required>
+    </div>
+</fieldset>
+
+    <fieldset class="grupo">
+        <!-- cpf -->
+        <div class="campo">
+            <label for="cpf"><strong>CPF</strong></label>
+            <input type="number" name="cpf" id="cpf" placeholder="Digite seu CPF..." required>
+        </div>
+
+        <!-- data Nascimento -->
+        <div class="campo">
+            <label for="dtNasc"><strong>Data de Nascimento </strong></label>
+            <input type="date" name="dtNasc" id="dtNasc" placeholder="Digite sua Data de Nascimento..." required>
+        </div>
+</fieldset>
+<fieldset class="grupo">
+        <form action="/action_page.php">
+            <p>Selecione o sexo:</p>
+              <input type="radio" id="fem" name="sexo" value="fem">
+              <label for="fem">Feminino</label><br>
+              <input type="radio" id="masc" name="sexo" value="masc">
+              <label for="masc">Masculino</label><br>
+              <input type="radio" id="nInf" name="sexo" value="nInf">
+              <label for="nInf">Não informar</label>
+        </form>
+    </fieldset><br>
+    
+    <fieldset class="grupo">
+        <!-- senha -->
+        <div class="campo">
+            <label for="senha"><strong>Senha: </strong></label>
+            <input type="password" name="senha" id="senha" placeholder="Digite sua senha..." required>
+        </div>
+        <!-- confirma senha -->
+        <div class="campo">
+            <label for="confSenha"><strong>Confirme sua senha:</strong></label>
+            <input type="password" name="confSenha" id="confSenha" placeholder="Digite novamente..." required>
+        </div>
+    </fieldset>
+
+    <fieldset id="bot">
+    <button id="cad" class="button" type="submit" onclick="registro()">Cadastrar</button>
+    <button id="limpa" class="button" type="submit" onclick="limpa()" >Limpa</button>
+    </fieldset>
+    
+
+
+    <!-- <div class="campo">
+        <label><strong>De qual lado da aplicação você desenvolve?</strong></label>
+        <label>
+            <input type="radio" name="devweb" value="frontend" checked>Front-end
+        </label>
+        <label>
+            <input type="radio" name="devweb" value="backend">Back-end
+        </label>
+        <label>
+            <input type="radio" name="devweb" value="fullstack">Fullstack
+        </label>
+    </div> -->
+    <!-- <input id="nome" type="text" placeholder="Nome">
+    <input id="sobreN" type="text" placeholder="Sobrenome">
+    <input id="email" type="text" placeholder="E-mail">
+    <input id="confEmail" type="text" placeholder="ConfirmaEmail">
+    <input id="tel" type="text" placeholder="Telefone">
+    <input id="cpf" type="text" placeholder="CPF">
+    <input id="dtNSC" type="text" placeholder="DataDeNascimento">
+    <input id="senha" type="text" placeholder="Senha">
+    <input id="confSenha" type="text" placeholder="ConfirmaSenha"> -->
+
+    <!-- <div class="campo">
+        <label for="senioridade"><strong>Sexo</strong></label>
+        <select id="senioridade" required>
+          <option selected disabled value="">Selecione</option>
+          <option>Masculino</option>
+          <option>Feminino</option>
+          <option>Não informado</option>
+        </select>
+    </div> -->
+    <!-- <form action="/action_page.php">
+        <p>Selecione o sexo:</p>
+          <input type="radio" id="fem" name="fav_language" value="fem">
+          <label for="fem">Feminino</label><br>
+          <input type="radio" id="masc" name="fav_language" value="masc">
+          <label for="masc">Masculino</label><br>
+          <input type="radio" id="nInf" name="fav_language" value="nInf">
+          <label for="nInf">Não informar</label>
+    </form> -->
+    <script src="script.js(1)"></script>
+</body>
+
+</html>

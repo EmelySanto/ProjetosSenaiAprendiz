@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao 2</title>
+</head>
+
+<body>
+    <h1>Questao 2</h1>
+    Digite seu codigo! <input type="number" id="cod"><br>
+    digite seu ano de nascimento! <input type="number" id="idade"><br>
+    digite quantos anos de trabalho vc tem! <input type="number" id="anosTRabalho"> 
+    <button onclick="questao2()">Calcular</button>
+    <div id="AI"></div>
+
+</body>
+
+</html>
+<script>
+    function questao2() {
+        var nascimento = document.getElementById("idade").value
+        var idade= nascimento-2021
+        var anodeIngresoo = document.getElementById("anosTRabalho").value
+        var anosTRabalho = anodeIngresoo-2021
+        var cod= document.getElementById("cod").value
+        var mostrar = "Funcionario "+cod+"<br>Situaçao: <br>"
+
+
+        if (idade >= 65) {
+            mostrar += "Vc esta aposentado!!! por idade!!"
+        } else {
+            if (anosTRabalho >= 30) {
+                mostrar += "Vc esta aposentado!!! por anos de trabalho!!"
+            }else{
+                if(idade>=60 && anosTRabalho>=25){
+                     mostrar += "Vc esta aposentado!!! por anos de trabalho e idade!!"
+                }else{
+                    if(idade<65 && anosTRabalho<30){
+                        mostrar+="Vc nao pode se aposentar pois nao preenche os requisitos!!!"
+                    }
+                }
+            }
+        }
+        document.getElementById("AI").innerHTML = mostrar
+
+    }
+</script>

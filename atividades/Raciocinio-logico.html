@@ -1,0 +1,2165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/css">
+    body {
+      background-color: #a871a6c7;
+      background-position-x: center;
+      margin-left: 5%;
+      margin-right: 5%;
+      border: 3px dotted rgba(229, 255, 135, 0.877);
+      padding: 10px 10px 10px 10px;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Raciocínio logico</h1>
+  <h2>Exercicios</h2>
+
+  <hr>
+  <h3>07 de julho [100] <button onclick="centoeum()">100.1</button>
+    <button onclick="centoedois()">100.2</button>
+    <button onclick="centoetres()">100.3</button>
+    <button onclick="centoequatro()">100.4</button>
+  </h3>
+  <div id="ai"></div>
+  <script>
+    function centoequatro() {
+      var carros_vendidos, salario_fixo, vcarro, comissao, salario_final
+
+      salario_fixo = Number(prompt("Qual o salario fixo?"))
+      carros_vendidos = Number(prompt("Quantos carros ele vendeu?"))
+      vcarro = Number(prompt("Qual valor total das vendas?"))
+      comissao = Number(prompt("Quanto de comissao vc ganha por carro vendido?"))
+
+      salario_final = salario_fixo + (comissao * carros_vendidos) + vcarro * 5 / 100
+
+      alert("O salario fixo: R$" + salario_fixo.toFixed(2) +
+        "\nCarros vendidos: " + carros_vendidos +
+        "\nComissao por carro: R$" + comissao.toFixed(2)
+        + "\ntotal De vendas: R$" + vcarro.toFixed(2) +
+        "\nSalario final: R$" + salario_final.toFixed(2))
+    }
+    function centoetres() {
+      var preco = Number(prompt("Digite!"))
+      var precosmais = preco * 0.68
+      var precofinal = preco + precosmais
+      document.getElementById("ai").innerHTML = "O preço final do carro é de R$" +
+      precofinal.toFixed(2) + " reais."
+    }
+    function centoedois() {
+      var idade = Number(prompt("Qual a idade do nadador?")), situacao = ""
+      if (idade => 18) {
+        F
+        situacao = "adulto!"
+      }
+      if (idade => 14 && idade < 18) {
+        situacao = "juvenil!"
+      }
+      if (idade => 9 && idade < 14) {
+        situacao = "infantil!"
+      }
+      if (idade < 9) {
+        situacao = "mirim!"
+      }
+      document.getElementById("ai").innerHTML = "O nadador se encontra na classe " + situacao
+    }
+    function centoeum() {
+      var n1, n2, n3, n4, media = 0, quantAluno = 0
+
+
+      var nome = prompt("Digite o nome do Aluno!")
+      n1 = Number(prompt("Nota primeira prova?"))
+      n2 = Number(prompt("Nnota segunda prova?"))
+      n3 = Number(prompt("Nota terceira prova?"))
+      n4 = Number(prompt("Nota quarta prova?"))
+      var fal = ""
+      var faltas = Number(prompt("Quantas falta esse aluno teve?"))
+      media = (n1 + n2 + n2 + n4) / 4
+      var situacao = ""
+
+      if (media > 7 && media < 10) {
+        situacao = "AProvador"
+      } else if (media < 7 && media > 4) {
+        situacao = "Recuperaçao"
+      } else if (media < 4 && media > 0) {
+        situacao = "Reprovado!"
+      }
+
+      if (faltas > 36) {
+        fal = "maior"
+        situacao = "Reprovado!"
+      } else if (faltas < 36) {
+        fal = "menor"
+      }
+
+      var imp = nome + "<br>Media: " + media + "<br>Situação:" + situacao + " Com faltas " + fal + " que 36!"
+
+      document.getElementById("ai").innerHTML = imp
+    }
+  </script>
+  <hr>
+  <h3>30 de junho [84] <button onclick="noveum()">9.1</button>
+    <button onclick="novedois()">9.2</button>
+    <button onclick="novetres()">9.3</button>
+    <button onclick="novequatro()">9.4</button>
+  </h3>
+  <!-- for(var i = 0; i < 3; i++){
+    for (var j = 0; j < 3; j++){
+        document.write(matriz[i][j] + "  - ");
+    }
+    document.write("<br>");
+} -->
+  <div id="res"></div>
+  <script>
+    function novequatro() {
+      var matriz = [[], [], [], []]
+      for (var i = 0; i < 4; i++) {
+        for (var j = 0; j < 4; j++) {
+          if (matriz) {
+
+          }
+
+        }
+        resp += "<br>"
+      }
+    }
+    function novetres() {
+      var matriz = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []]
+      var valor = Number(prompt("DIgite o valor que deseja conferir!!")), loc = "A localizaçao do item é =",
+        resp = "TAbela matriz 9.3<br>"
+      for (var i = 0; i < 8; i++) {
+        for (var j = 0; j < 8; j++) {
+          matriz[i][j] = Math.floor(Math.random() * 100)
+          resp += matriz[i][j] + " - "
+          if (matriz[i][j] == valor) {
+            localizaçao += " LInha " + (i + 1) + " COluna" + (j + 1)
+          }
+        }
+        resp += "<br>"
+      }
+      document.getElementById(res).innerHTML = resp + loc
+    }
+    function novedois() {
+      var matriz = [[], [], [], [], [], [], [], []]
+      var maiores = "", resp = "TAbela matriz 9.2<br>"
+      for (var i = 0; i < 8; i++) {
+        for (var j = 0; j < 8; j++) {
+          matriz[i][j] = Math.floor(Math.random() * 100)
+          resp += matriz[i][j] + " - "
+          if (matriz[i][j] > 10) {
+            maiores += matriz[i][j] + " - "
+          }
+        }
+        resp += "<br>"
+      }
+      document.getElementById("res").innerHTML = resp + "<br> Sendo esses os numeros maiores que 10= " + maiores
+    }
+    function noveum() {
+      var matriz = [[], [], [], [], [], [], [], [], [], []]
+      var maior = -1, posi = "", resp = "", linha = "", coluna = ""
+      for (var i = 0; i < 10; i++) {
+        for (var j = 0; j < 10; j++) {
+          matriz[i][j] = Math.floor(Math.random() * 100)
+          resp += matriz[i][j] + " - "
+          if (matriz[i][j] > maior) {
+            maior = matriz[i][j]
+            // posi = "Coluna: " + (i + 1) + " Linha: " + (j + 1)
+            coluna = i + 1
+            linha = j + 1
+          }
+        }
+        resp += "<br>"
+      }
+      document.getElementById("res").innerHTML = "9.1: <br>" + resp + "O maior valor sendo= " + maior + " esta na linha= " + linha + " Na coluna=" + coluna
+    }
+  </script>
+  <hr>
+  <h3>24 de junho [83]FUNÇÕES ARRAYS E STRING <button onclick="oito()">8.8</button></h3>
+  <div id="8"></div>
+  <script>
+    function oito() {
+      var n1 = [], n2 = [], n3 = []
+
+      for (var i = 0; i < 9; i++) {
+
+        n1[i] = (Math.floor(Math.random() * 100) + 1)
+        n2[i] = (Math.floor(Math.random() * 100) + 1)
+        n3[i] = (Math.floor(Math.random() * 100) + 1)
+      }
+      var mostran1 = indexOF.n1(0, 3)
+      var mostran2 = indexOF.n2(4, 6)
+      var mostran3 = indexOF.n3(7, 9)
+
+      document.getElementById("8").innerHTML = "os numeros do n1 foram: " +
+        mostran1 + "os numeros do n3 foram: " + mostran3
+    }
+    function noveoito() {
+
+    }
+  </script>
+
+  <hr>
+  <h3>16 de junho [82]Vetores e estruturas de repetição
+    <button onclick="oitooito()">8.8</button>
+    <button onclick="oitonove()">8.9</button>
+    <button onclick="oitodez()">8.10</button>
+    <button onclick="oitodoze()">8.12</button>
+    <button onclick="oitotreze()">8.13</button>
+  </h3>
+  <div id="a"></div>
+  <div id="b"></div>
+  <div id="c"></div>
+  <div id="d"></div>
+  <script>
+    function oitotreze() {
+      var vetor = []
+      var a = Number(prompt("DIgite o valor da variavel A"))
+      var b = Number(prompt("DIgite o valor da variavel B"))
+      var c = Number(prompt("DIgite o valor da variavel C"))
+      var i = 0, a1 = 0, b1 = 0, c1 = 0
+
+      while (i < 10) {
+        vetor[i] = Number(prompt("DIgite o valor do vetor " + i))
+        if (vetor[i] == a) {
+          a1++
+        }
+        if (vetor[i] == b) {
+          b1++
+        }
+        if (vetor[i] == c) {
+          c1++
+        }
+        i++
+      }
+      document.getElementById("d").innerHTML = "O Numeros são: " + vetor +
+        "<br>AS vezes que os numeros repetiram é <strong>A:" + a + "=" + a1 + "<strong> B:<strong>" + b +
+        "=" + b1 + "<strong> C:<strong>" + c + "=" + c1 + "<strong>"
+    }
+    function oitodoze() {
+      var vetor = [], pares = ""
+      var maior = 0, menor = 0, media = 0, soma = 0, maiorMed = "", i = 0, u = 0
+      var valor = Number(prompt("Quantos numeros vc vai digitar?"))
+
+      while (i < valor) {
+        vetor[i] = Math.floor(Math.random() * 100)
+        if (u < 1) { maior = vetor[i]; menor = vetor[i]; u++ }
+
+        if (vetor[i] % 2 == 0) {
+          pares = pares + vetor[i] + ","
+        }
+        if (vetor[i] > maior) {
+          maior = vetor[i]
+        }
+        if (vetor[i] < menor) {
+          menor = vetor[i]
+        }
+        soma = soma + vetor[i]
+        i++
+      } media = soma / valor
+      i = 0
+
+      while (i < valor) {
+
+        if (vetor[i] > media) {
+          maiorMed = maiorMed + vetor[i] + ","
+        }
+        i++
+      }
+
+
+      document.getElementById("c").innerHTML = "Vetores iniciais: " + vetor + "<br>Pares: " +
+        pares + "<br>Maior numero: " + maior + "<br>Menor numero: " + menor +
+        "<br>Numeros maior que a media= " + media + " São: " + maiorMed
+    }
+
+
+    function oitodez() {
+
+
+    }
+    function oitonove() {
+      var vetor1 = [], vetor2 = [], soma = [], subt = [], mult = [], div = []
+      var j = 0, i = 0, s = 0, m = 0, d = 0
+      while (j < 10) {
+        vetor1[j] = Math.floor(Math.random() * 100)
+        vetor2[j] = Math.floor(Math.random() * 100)
+        j++
+      }
+
+      while (i < 10) {
+        soma[i] = vetor1[i] + vetor2[i]
+        i++
+      }
+      while (s < 10) {
+        subt[s] = vetor1[s] - vetor2[s]
+        s++
+      }
+      while (m < 10) {
+        mult[m] = vetor1[m] * vetor2[m]
+        m++
+      }
+      while (d < 10) {
+        div[d] = (vetor1[d] / vetor2[d]).toFixed(2)
+        d++
+
+      }
+
+      document.getElementById("a").innerHTML = "vetor 1: " + vetor1 + "<br>Vetor 2: " + vetor2 + "<br>Soma: " + soma + "<br>Subtração: " + subt + "<br>Multiplicação: " + mult + "<br>Divisão: " + div
+    }
+
+    function oitooito() {
+      var vetor1 = [], vetor2 = [], vetor3 = [], vetor4 = [], j, b = 0
+
+      while (b < 9) {
+        vetor1[b] = Math.floor(Math.random() * 100)
+        vetor2[b] = Math.floor(Math.random() * 100)
+        vetor3[b] = Math.floor(Math.random() * 100)
+        b++
+
+      }
+      j = 0
+      while (j < 9) {
+        if (j >= 0 && j < 3) {
+          vetor4[j] = vetor1[j]
+        } else if (j >= 3 && j < 6) {
+          vetor4[j] = vetor2[j]
+        } else if (j >= 6 && j < 9) {
+          vetor4[j] = vetor3[j]
+        }
+        j++
+      }
+
+      document.getElementById("b").innerHTML = "Vetor 1: " + vetor1 + "<br>Vetor 2: " + vetor2 + "<br>Vetor 3: " + vetor3 + "<br>Sendo assim o vetor 4 fica assim: " + vetor4
+    }
+  </script>
+
+
+  <hr>
+  <h3>14 de Junho<button onclick="vetor1()">Vetor filho!!!</button>
+    <div id="v"></div>
+    <script>
+      function vetor1() {
+        var mae = []
+        var pai = []
+        var filho = []
+        var num = 0
+
+        for (var i = 0; i < 50; i++) {
+
+          mae[num] = Math.floor(Math.random() * 100)
+          pai[num] = Math.floor(Math.random() * 100)
+          if (num % 2 == 0) {
+            filho[num] = pai[num]
+          } else if (num % 2 != 0) {
+            filho[num] = mae[num]
+          }
+          num++
+        }
+        document.getElementById("v").innerHTML = "Pai:" + pai + "<br>Mãe:" + mae + "<br>Filho:" + filho
+      }
+
+    </script>
+    <hr>
+    <h3>2 de junho [73]EStruturas de repetiçao FOR -
+      <button onclick="setequinze()">7.15</button>
+      <button onclick="setedezeseis()">7.16</button>
+      <button onclick="setedezesete()"></button>
+    </h3>
+    <div id="resposta"></div>
+    <script>
+      function setequinze() {
+
+      }
+      function setedezeseis() {
+
+      }
+      function setedezesete() {
+
+      }
+    </script>
+    <hr>
+    <h3>26 de Maio [72] Do-While <button onclick="macar()">7.12</button>
+      <button onclick="parres()">7.13</button> <button onclick="indeter()">7.14</button>
+    </h3>
+    <script>
+      function indeter() {
+        var numero, maior = ""
+        do {
+          numero = Number(prompt("Digite seu numero\n Para parar o codigo digite -1"))
+
+          if (numero != -1)
+            var armazenamento = armazenamento + numero + "\n"
+          if (numero > maior) {
+            maior = numero
+          }
+        } while (numero != -1);
+        alert("VC digitou os seguintes numeros: \n" + armazenamento +
+          "\nMaior numero digitado: " + maior)
+      }
+      function parres() {
+        var num1 = Number(prompt("num1"))
+        var num2 = Number(prompt("num2"))
+        var pares = ""
+
+        if (num1 < num2) {
+          while (num1 <= num2) {
+            if (num1 % 2 == 0) {
+              pares += "\n" + num1;
+            }
+            num1++
+          }
+        } else
+          if (num2 < num1) {
+            while (num2 <= num1) {
+              if (num1 % 2 == 0) {
+                pares += "-" + num1;
+              }
+              num1--
+            }
+          }
+        alert("Os números pares são:" + pares)
+      }
+
+      function macar() {
+        var numero, i, armazenamento = ""
+        i = 0;
+        do {
+          numero = Number(prompt("Digite seu numero\n Para parar o codigo digite 0"))
+          armazenamento = armazenamento + numero + "\n"
+          if (numero < 200 && numero > 100) {
+            i++
+          }
+        } while (numero != 0);
+
+        alert("VC digitou os seguintes numeros: \n" + armazenamento +
+          "\n e há " + i + " numeros entre 100 e 200!!")
+      }
+
+    </script>
+    <hr>
+    <h3>24 de Maio [71]Estruturas de Repetições<button onclick="altura710()">7.10 - Media de altura</button>
+      <button onclick="impares79()">7.9 - Impares</button>
+      <button onclick="contador78()">7.8 - Contador</button>
+      <button onclick="tabuada76()">7.6 - Tabuada</button>
+    </h3>
+
+
+    <script>
+      function altura710() {
+        var i = 1, menorAltura = 0, maiorAltura = 0, somaAlturaMulheres = 0, qtdMulheres = 0,
+          somaAlturaPopulacao = 0, qtdHomens = 0;
+
+        while (i <= 5) {
+          sexo = Number(prompt("INFORME O GENERO (0 - MASC / 1 - FEM)"));
+          altura = Number(prompt("INFORME A ALTURA (exemplo 1.70)"));
+
+          somaAlturaPopulacao += altura;
+
+          if (i == 1) {
+            menorAltura = altura;
+            maiorAltura = altura;
+          }
+
+          if (altura > maiorAltura) {
+            maiorAltura = altura
+          }
+
+          if (altura < menorAltura) {
+            menorAltura = altura
+          }
+
+          if (sexo == 1) {
+            qtdMulheres++;
+            somaAlturaMulheres = somaAlturaMulheres + altura;
+          }
+
+          if (sexo == 0) {
+            qtdHomens++;
+          }
+          i++;
+        }
+        var mediaAlturaMulheres = (somaAlturaMulheres / qtdMulheres).toFixed(2);
+        var mediaAlturaPopulacao = (somaAlturaPopulacao / 5).toFixed(2)
+
+        alert("Resultados! \nMaior altura: " + maiorAltura.toFixed(2) + "\n" + "Menor altura: " + menorAltura.toFixed(2) +
+          +"\nMedias!! \n Media de altura Mulheres: " + mediaAlturaMulheres + "\nMedia geral de altura: " + mediaAlturaPopulacao +
+          "\nPercentual de homens: " + (100 / 5) * qtdHomens)
+
+      }
+      function impares79() {
+        var numeros, i = 0, i, impares = 0, pares = 1
+        while (i < 6) {
+
+          numeros = Number(prompt("digite um numero"))
+          if (numeros % 2 != 0) {
+            impares = impares + numeros
+          }
+          if (numeros % 2 == 0) {
+            pares = pares * numeros
+          }
+          i++
+        }
+        alert("A soma dos numeros impares digitados é " + impares +
+          "\n E o produto da multiplicaçao dos numeros pares digitados é " + pares)
+      }
+      function tabuada76() {
+        var multiplica = Number(prompt("Qual tabuada você deseja ver?")), ai = 0, resp = ""
+        while (ai <= 10) {
+
+          resp = resp + "" + ai + "*" + multiplica + "=" + (ai * multiplica) + "\n"
+          ai++
+        }
+        alert("tabuada de " + multiplica + "\n" + resp)
+      }
+      function contador78() {
+        var numero = 9, resposta = ""
+        while (numero < 1000) {
+          numero++
+          if (numero == 501) {
+            numero = 900
+          }
+          resposta = resposta + numero + "<br>"
+        }
+        document.write("numeros de 10 á 500" + resposta)
+      }
+    </script>
+    <hr>
+    <center>
+
+      <h3>19 de Maio</h3>
+    </center>
+
+    <h4>[70]Estruturas de Repetições <button onclick="juju75()">7.5 - JUca de novo precisa de ajuda!</button>
+      <button onclick="substituiçao74()">7.4 - Valor minimo e maximo!</button>
+    </h4>
+    <script>
+      function juju75() {
+        var valor = Number, i = Number, resposta = Number, mensagem = "", aa
+        valor = 0.33
+        i = 1
+        aa = i + "-" + valor.toFixed(2) + "\n"
+        while (i < 500) {
+          i++
+          resposta = valor * i
+          mensagem = mensagem + "" + i + "-" + resposta.toFixed(2) + "\n"
+
+        }
+        alert(aa + mensagem + "\n")
+      }
+
+      function substituiçao74() {
+        var min, max, valor, vc = 1;
+        while (vc <= 15) {
+          valor = prompt("informe o valor:")
+          if (vc == 1) {
+            max = valor
+            min = valor
+          }
+          if (valor < min) {
+            min = valor
+          }
+
+          if (valor > max) {
+            max = valor
+          }
+          vc++
+        }
+        alert("o valor maximo é " + max + " e o minimo " + min)
+      }
+
+    </script>
+
+    <center>
+      <h3>17 de Maio</h3>
+    </center>
+    <h4>[65] <button onclick="criança()">6.5 Doaçao para criança Esperança</button>
+      <button onclick="futebol()">6.7 Resultado de uma partida de futebol</button>
+    </h4>
+    <script>
+      function futebol() {
+        var qtdGolTimeA = Number(prompt("Quantos gols fez o time A"));
+        var qtdGolTimeB = Number(prompt("Quantos gols fez o time B"));
+
+        var diferenca = Math.abs(qtdGolTimeA - qtdGolTimeB);
+
+        switch (diferenca) {
+          case 0:
+            alert("DEU EMPATE");
+            break;
+          case 1:
+          case 2:
+          case 3:
+            alert("PARTIDA NORMAL");
+            break;
+          default:
+            alert("GOLEADAAAAAAAAAA!")
+        }
+
+      }
+      function criança() {
+        var doacao = Number(prompt("Criança esperança\n Doaçoes disponiveis:" +
+          "\n 10,00 \n R$25,00\n R$50,00 \n Ou qualuqer valor superior a esses!\nQual valor você desesa doar: \n "))
+
+        switch (doacao) {
+          case 25: alert("Obrigado por sua doaçao de R$25,00")
+            break;
+          case 10: alert("Obrigado por sua doaçao de R$10,00")
+            break;
+          case 50: alert("Obrigado por sua doaçao de R$50,00")
+            break;
+          default: {
+            alert("Obrigado por sua doaçao de R$" + doacao.toFixed(2))
+          }
+        }
+      }
+    </script>
+    <h4>[64]<button onclick="calculadora()">Escolha a operaçao da conta</button>
+      <button onclick="dependentessal()">Reajuste salarial de acordo com dependentes</button>
+    </h4>
+    <script>
+
+      //botao 2
+      function dependentessal() {
+        var salario = Number(prompt("Qual seu salario?")), dependentes = Number(prompt("Quantas pessoas alem de voce dependem dessa renda?"))
+        switch (dependentes) {
+          case 0: var conta1 = salario * (2 / 100), conta2 = salario + conta1
+            alert("Seu salario com novo é R$" + conta2 + " Sabendo que voce tem 0 dependentes!!")
+            break;
+          case 1: var conta1 = salario * (5 / 100), conta2 = salario + conta1
+            alert("Seu salario com novo é R$" + conta2 + " Sabendo que voce tem 1 dependentes!!")
+            break;
+          case 2: var conta1 = salario * (7 / 100), conta2 = salario + conta1
+            alert("Seu salario com novo é R$" + conta2 + " Sabendo que voce tem 2 dependentes!!")
+            break;
+          case 3: var conta1 = salario * (10 / 100), conta2 = salario + conta1
+            alert("Seu salario com novo é R$" + conta2 + " Sabendo que voce tem 3 dependentes!!")
+            break;
+          case 4: var conta1 = salario * (15 / 100), conta2 = salario + conta1
+            alert("Seu salario com novo é R$" + conta2 + " Sabendo que voce 4 dependentes!!")
+            break;
+          default: {
+            var conta1 = salario * (15 / 100), conta2 = salario + conta1
+            alert("Seu salario com novo é R$" + conta2 + "Sabendo que voce 4 dependentes!!")
+          }
+        }
+
+      }
+      //fim do botao 2
+      //botao 1
+      function calculadora() {
+        var operac = prompt("Digite o Sinal da operaçao: \n / divisão\n * multiplicação\n - subtração \n + soma")
+
+        switch (operac) {
+          case "/":
+            div()
+            break;
+          case "*": multi()
+            break;
+          case "-": sub()
+            break;
+          case "+": soma()
+        }
+      }
+
+      function div() {
+        var a = Number(prompt("Qual o primeiro valor da conta?")), b = Number(prompt("Qual o segundo valor da conta?"))
+        var conta = a / b
+        alert("O resultado dessa divisao é " + conta)
+      }
+      function multi() {
+        var a = Number(prompt("Qual o primeiro valor da conta?")), b = Number(prompt("Qual o segundo valor da conta?"))
+        var conta = a * b
+        alert("O resultado dessa multiplicaçao é " + conta)
+      }
+      function sub() {
+        var a = Number(prompt("Qual o primeiro valor da conta?")), b = Number(prompt("Qual o segundo valor da conta?"))
+        var conta = a - b
+        alert("O resultado dessa subtração é " + conta)
+      }
+      function soma() {
+        var a = Number(prompt("Qual o primeiro valor da conta?")), b = Number(prompt("Qual o segundo valor da conta?"))
+        var conta = a + b
+        alert("O resultado dessa soma é " + conta)
+      }
+     //fim do botao 1
+
+
+
+    </script>
+    <hr>
+
+    <center>
+      <h3>12 de maio</h3>
+    </center>
+    <h5>Estruturas de Switch/case</h5>
+    <h4>[63]Quantos dias tem cada mes do ano <button onclick="diasa()">clique aq!</button></h4>
+    <script>
+      function diasa() {
+        var mes = prompt("diga um numero")
+
+        switch (mes) {
+          case "1":
+          case "3":
+          case "5":
+          case "7":
+          case "8":
+          case "10":
+          case "12":
+            alert("esse mes tem 31 dias")
+            break;
+          case "4":
+          case "6":
+          case "9":
+          case "11":
+            alert("esses meses tem 30 dias")
+            break;
+          case "2":
+            alert("esse mes tem 28 dias")
+        }
+      }
+
+    </script>
+    <h4>[62] Desempenho do aluno<button onclick="amarelo()">clique aq!</button></h4>
+
+    <script>
+      function amarelo() {
+        var letra = (prompt("Digite a letra correspondente:\nA-excelente\nB-otino\nC-Bom\nD-regular\nE-Nos vemos ano que vem!"))
+
+        switch (letra) {
+          case "A": alert("excelente")
+            break;
+          case "B": alert("otino")
+            break;
+          case "C": alert("Bom");
+            break;
+          case "D": alert("regular")
+            break;
+          case "E": alert("Nos vemos ano que vem!")
+            break;
+        }
+      }
+    </script>
+    <hr>
+    <h3>10 de Maio</h3>
+    <h4>[61]Media com peso<button onclick="media45()">Clique aqui!</button></h4>
+    <script>
+      function media45() {
+        var n1, n2, n3, n4
+        var p1, p2, p3, p4
+        var total
+
+        n1 = prompt("Nota primeira prova?")
+        p1 = prompt("Qual o peso da primeira prova?")
+        n2 = prompt("Nota segunda prova?")
+        p2 = prompt("Qual o peso da segunda prova?")
+        n3 = prompt("Nota terceira prova?")
+        p3 = prompt("Qual o peso da terceira prova?")
+        n4 = prompt("Nota Quarta prova?")
+        p4 = prompt("Qual o peso da Quarta prova?")
+
+        n1 = Number(n1)
+        n2 = Number(n2)
+        p1 = Number(p1)
+        p2 = Number(p2)
+        n3 = Number(n1)
+        n4 = Number(n2)
+        p3 = Number(p1)
+        p4 = Number(p2)
+
+        total = (n1 * p1 + n2 * p2 + n3 * p3 + n4 * p4) / (p1 + p2 + p3 + p4)
+        alert("A media final é: " + total)
+      }
+    </script>
+    <h4>[60]Voce tem o dinheiro no cofrinho? <button onclick="moedas()">Clique aqui!</button></h4>
+
+    <script>
+      function moedas() {
+        var md1, md50, md10, md25, md5, produto
+        var conta
+
+        md1 = Number(prompt("Digite os valores: \nQuantas  moedas de R$1,00 vc tem?"))
+        md50 = Number(prompt("Quantas  moedas de R$0,50 vc tem?"))
+        md25 = Number(prompt("Quantas  moedas de R$0,25 vc tem?"))
+        md10 = Number(prompt("Quantas moedas de R$0,10 vc tem?"))
+        md5 = Number(prompt("Quantas moedas de R$0,05 vc tem?"))
+
+        Produto = Number(prompt("Qual valor Do produto?"))
+
+        conta = (md1 * 1) + (md50 * 0.50) + (md25 * 0.25) + (md10 * 0.10) + (md5 * 0.05)
+
+        if (conta >= produto) {
+          alert("Voce tem R$" + conta.toFixed(2) +
+            "\nEsse valor é o sufiente ara comprar o que voce quer")
+        } else if (conta < produto) {
+          alert("Voce tem R$" + conta.toFixed(2) +
+            "\nEsse valor não é sufiente ara comprar o que voce quer")
+        }
+
+      }
+    </script>
+    <hr>
+
+
+
+    <h3>05 De Maio</h3>
+    <h4>[54]Poligonos <button onclick="calculo()">É um polinomio ou não?Se sim, calculo!</button></h4>
+    <script>
+      function calculo() {
+        var lados = Number(prompt("Quantos lados tem esse polinomio?")),
+          tamanho, valorarea, altura
+
+        if (lados < 3) {
+          alert("Não é um polinomio!")
+        } else if (lados == 3) {
+          tamanho = Number(prompt("Qual a medida desse polinomio em CM"))
+          valorarea = (tamanho * tamanho) / 2
+          alert("É um triangulo, e a area dele é: " + valorarea)
+        } else if (lados == 4) {
+          tamanho = Number(prompt("Qual a medida desse polinomio em CM"))
+          valorarea = (tamanho * tamanho)
+          alert("É um quadrado, e a area dele é: " + valorarea)
+        } else if (lados == 5) {
+          altura = Number(prompt("Qual a altura?"))
+          tamanho = Number(prompt("Qual a medida dos lados"))
+          valorarea = (5 * tamanho) * altura
+          alert("É um pentagono" + valorarea)
+        } else if (lados > 5) {
+          alert("polinomio nao identificado!")
+        }
+      }
+    </script>
+
+    <hr>
+    <h3>28 de Abril</h3>
+
+    <h4>[53]Feira do juca</h4>
+    Quantas maças você comprou?<input type="text" id="inpQuantMacas">
+    <button onclick="calcularValor()">Calcular</button>
+    <div id="divValor"></div>
+    <script>
+      function calcularValor() {
+        var quantidade = document.getElementById("inpQuantMacas").value
+        if (quantidade < 12) {
+          valor = 0.30 * quantidade
+        } else {
+          if (quantidade >= 12) {
+            valor = 0.25 * quantidade
+          }
+        }
+        document.getElementById("divValor").innerHTML = "Suas compras deram R$" + valor.toFixed(2) + " sendo " + quantidade + " Maças"
+      }
+    </script>
+
+
+
+    <h4>[52]Peso
+      <button onclick="altura()">Calcular peso ideal</button>
+    </h4>
+    <script>
+      function altura() {
+        var sexo = Number(prompt("Digite \n1=Mulher \n 2=Homem")), altura = Number(prompt("Qual sua altura? em metros")), peso
+
+        if (sexo == 1) {
+          peso = (62.1 * altura) - 44.7
+          alert("Seu peso ideal, considerando sua altura de " + altura + "M, é de " + peso.toFixed(1) + "kg")
+        } else {
+          if (sexo == 2) {
+            peso = (72.7 * altura) - 58
+            alert("Seu peso ideal, considerando sua altura de " + altura + "M, é de " + peso.toFixed(1) + "kg")
+          }
+        }
+      }
+    </script>
+
+    <h4>[52.2]Teste input</h4>
+    Altura (metros)<input type="text" id="inpAltura"><br>
+    Sexo (F/M) <input type="text" id="inpSexo"><br>
+    <button onclick="calcularPesoIdeal()">Calcular</button>
+    <div id="divPesoIdeal"></div>
+    <script>
+      function calcularPesoIdeal() {
+        var altura = document.getElementById("inpAltura").value
+        var sexo = document.getElementById("inpSexo").value
+
+        if (sexo == "F") {
+          pesoIdeal = (62.1 * altura) - 44.7
+        } else {
+          if (sexo == "M") {
+            pesoIdeal = (72.7 * altura) - 58
+          } else {
+            alert("Verifique o sexo informado.\nDigite apenas F ou M")
+
+          }
+        }
+        document.getElementById("divPesoIdeal").
+          innerHTML = "o peso ideal para a sua altura é: " +
+          pesoIdeal.toFixed(1) + "kg"
+      }
+    </script>
+
+
+
+
+    <hr>
+    <h3>26 de Abril</h3>
+    <h4>Pontuaçao: <input type="txt" ename="nome" id="inpPontuacao">
+      <button onclick="classificarpontuacao()">Classificar</button>
+      <div id="divResultado">Seu resultado aparecera aqui</div>
+    </h4>
+    <script>
+      function classificarpontuacao() {
+        var pontuaçao = document.getElementById("inpPontuacao").value
+        if (pontuaçao <= 10) {
+          document.getElementById("divResultado").innerHTML = "Deu ruim..."
+        }
+        if (pontuaçao > 10 && pontuaçao <= 100) {
+          document.getElementById("divResultado")
+            .innerHTML = "Ué nao foi tao bom..."
+        }
+        if (pontuaçao > 100 && pontuaçao <= 200) {
+          document.getElementById("divResultado")
+            .innerHTML = "Ué voce foi muito bem..."
+        }
+        if (pontuaçao > 200) {
+          document.getElementById("divResultado")
+            .innerHTML = "Ué voce foi surpreendente bem..."
+        }
+      }
+    </script>
+
+
+    <h4>[49.2]Calculo de diaria com Imput</h4>
+    Quantos dias você ficou hospedado? <input type="text" id="inpDias">
+    <button onclick="airbienb()">Calcular</button>
+    <div id="divResultado">O resultado aparecera aqui!</div>
+    <script>
+      function airbienb() {
+        var diarias = document.getElementById("inpDias").value
+        var descontos, desconto1 = 10 / 100, desconto2 = 15 / 100, multa = 150, valorDiaria, total
+
+        if (diarias > 0 && diarias <= 5) {
+          valorDiaria = diarias * 100
+          descontos = (valorDiaria * desconto1) + (valorDiaria * desconto2)
+          total = valorDiaria - descontos + multa
+          document.getElementById("divResultado").innerHTML = "O valor total da conta foi: R$" + total.toFixed(2)
+        } else {
+          if (diarias >= 6 && diarias <= 10) {
+            valorDiaria = diarias * 90
+            descontos = (valorDiaria * desconto1) + (valorDiaria * desconto2)
+            total = valorDiaria - descontos + multa
+            document.getElementById("divResultado").innerHTML = "O valor total da conta foi: R$" + total.toFixed(2)
+          } else {
+            if (diarias >= 11) {
+              valorDiaria = diarias * 80
+              descontos = (valorDiaria * desconto1) + (valorDiaria * desconto2)
+              total = valorDiaria - descontos + multa
+              document.getElementById("divResultado").innerHTML = "O valor total da conta foi: R$" + total.toFixed(2)
+            } else {
+              if (diarias <= 0) {
+                document.getElementById("divResultado").innerHTML = "Você escreveu algo de errado!"
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <h4>[49]Calulo de diaria Com prompt <button onclick="albergue()">Clique aqui!</button></h4>
+    <script>
+      function albergue() {
+        var diaria = Number(prompt("Quantos dias você ficou hospedado?")), valorDiaria,
+          descontos, desconto1 = 10 / 100, desconto2 = 15 / 100, multa = 150, total
+
+        if (diaria <= 5) {
+          valorDiaria = diaria * 100
+          descontos = (valorDiaria * desconto1) + (valorDiaria * desconto2)
+          total = valorDiaria - descontos + multa
+          alert("Você devera pagar ao hotel: " +
+            "\nDiarias: " + diaria + " Com o total de R$100.00 por dia, totalizando: R$" + valorDiaria.toFixed(2) +
+            "\nCom descontos de 10% do cupom, 25% da merenda e a multa no valor de R$150.00" +
+            "\nO total a pagar é R$" + total.toFixed(2))
+        } else {
+          if (diaria >= 6 && diaria <= 10) {
+            valorDiaria = diaria * 90
+            valorDiaria = diaria * 80
+            descontos = (valorDiaria * desconto1) * desconto2
+            total = valorDiaria - descontos + multa
+            alert("Você devera pagar ao hotel: " +
+              "\nDiarias: " + diaria + " Com o total de R$100.00 por dia, totalizando: R$" + valorDiaria.toFixed(2) +
+              "\nCom descontos de 10% do cupom, 15% da merenda e a multa no valor de R$150.00" +
+              "\nO total a pagar é R$" + total.toFixed(2))
+          } else {
+            if (diaria >= 11) {
+              valorDiaria = diaria * 80
+              descontos = (valorDiaria * desconto1) * desconto2
+              total = valorDiaria - descontos + multa
+              alert("Você devera pagar ao hotel: " +
+                "\nDiarias: " + diaria + " Com o total de R$100.00 por dia, totalizando: R$" + valorDiaria.toFixed(2) +
+                "\nCom descontos de 10% do cupom, 25% da merenda e a multa no valor de R$150.00" +
+                "\nO total a pagar é R$" + total.toFixed(2))
+            } else {
+              if (diaria <= 0) {
+                alert("Você digitou algo errado, tente novamente!!!")
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <h4>[50]Deve votar ou nao? <button onclick="votarOuNao()">Clique aqui!</button></h4>
+    <script>
+      function votarOuNao() {
+        var vt = Number(prompt("Digite sua idade: "))
+
+        if (vt < 16) {
+          alert("Você não pode votar")
+        }
+        else if (vt >= 16 && vt <= 17) {
+          alert("Sua idade é " + vt + " Sendo assim seu Voto é facultativo")
+        }
+        else if (vt >= 18 & vt <= 65) {
+          alert("Sua idade é " + vt + " Sendo assim Voto é obrigatório")
+        }
+        else if (vt > 65) {
+          alert("Sua idade é " + vt + " Sendo assim seu Voto é facultativo")
+        }
+
+      }
+    </script>
+
+
+
+
+    <hr>
+    <h3>19 de Abril</h3>
+    <h4>[46]Media e se passou ou nao! e recuperaçao <button onclick="media2()">Clique e escreva sua nota!</button>
+    </h4>
+
+    <script>
+      function media2() {
+        var n1 = Number(prompt("Qual sua nota?")), n2 = Number(prompt("Qual sua nota?")), media = (n1 + n2) / 2
+
+        if (media >= 7) {
+          alert("Mano juca Você passou, e esta acima da media!!! " + media)
+        } else {
+          if (media >= 2) {
+            alert("vc nao passou mas tem direito a recuperaçao")
+            var rec = Number(prompt("Qual a nota da sua recuperaçao"))
+            if (rec >= 7) {
+              alert("vc passou com a nota de recuperaçao de " + rec)
+            } else {
+              if (rec < 7) {
+                alert("vc nao passou, tente de novo :)")
+              }
+            }
+          }
+        }
+      }</script>
+
+    <p>[46]Pontuaçao de joquinho <button onclick="jogo()">Clique aqui!</button></p>
+    <script>function jogo() {
+        var pontuacao = Number(prompt("Qual sua pontuaçao?"))
+
+        if (pontuacao <= 10) {
+          alert("Amor... entao voce joga muito mal, treine mais!")
+        } else {
+          if (pontuacao > 10 && pontuacao <= 100) {
+            alert("Supimpa, foi mediano, parabens!!!")
+          } else {
+            if (pontuacao > 100 && pontuacao <= 200) {
+              alert("Parabens!!! isso foi muito bom")
+            } else {
+              if (pontuacao > 200) {
+                alert("EXPETACULAR!!!! Que isso em? bah")
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <hr>
+    <h3> 14 de Abril</h3>
+    <h4>[41]Atividade com else
+      <button onclick="lanche()">Clique e escolha seu lanche!</button>
+      <button onclick="telefone()">Clique e escreva o DDD!</button>
+    </h4>
+    <script>
+      function lanche() {
+        var lanche = Number(prompt("Escolha seu pedido: \n 1: Cachorro quente  R$ 4,00 \n 2: X-Salada  R$4,50" +
+          "\n 3: X-Bacon  R$ 5,00 \n 4: Torrada simples R$ 2,00 \n 5: Refrigerante R$ 1,50 \n \n Qual você comprou?")),
+          quantidade = Number(prompt("Quantos você ccomprou?")), conta
+
+        if (lanche == 1) {
+          conta = quantidade * 4
+          alert("Total = R$" + conta.toFixed(2))
+        } else {
+          if (lanche == 2) {
+            conta = quantidade * 4.5
+            alert("Total = R$" + conta.toFixed(2))
+          } else {
+            if (lanche == 3) {
+              conta = quantidade * 5.0
+              alert("Total = R$" + conta.toFixed(2))
+            } else {
+              if (lanche == 4) {
+                conta = quantidade * 2
+                alert("Total = R$" + conta.toFixed(2))
+              } else {
+                if (lanche == 5) {
+                  conta = quantidade * 1.5
+                  alert("Total = R$" + conta.toFixed(2))
+                } else {
+                  alert("Você digitou algo errado tente novamente...")
+                }
+              }
+            }
+          }
+        }
+      }
+
+      function telefone() {
+        var ddd = Number(prompt("Escreva o DDD do numero:"))
+
+        if (ddd == 61) {
+          alert("Brasilia")
+        } else {
+          if (ddd == 71) {
+            alert("Salvador")
+          } else {
+            if (ddd == 11) {
+              alert("São Paulo")
+            } else {
+              if (ddd = 21) {
+                alert("Rio de Janeiro")
+              } else {
+                if (ddd = 32) {
+                  alert("Juiz de Fora")
+                } else {
+                  if (ddd = 19) {
+                    alert("Campinas")
+                  } else {
+                    if (ddd = 27) {
+                      alert("Vitoria")
+                    } else {
+                      if (ddd = 31) {
+                        alert("Belo Horizonte")
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <h4>[42]Digite um numero correspondente a um mes
+      <button onclick="mes()">Clique aqui!</button>
+    </h4>
+    <script>
+      function mes() {
+        var mes = Number(prompt("Meses:" + "\n1: January \n2: February \n3: March \n4: April \n5: May\n6: June\n7: July\n8: August" +
+          "\n9: September\n10: October\n11:November \n12: December \nQual o valor do mes?"))
+
+        if (mes == 1) {
+          alert("January")
+        } else {
+          if (mes == 2) {
+            alert("February")
+          } else {
+            if (mes == 3) {
+              alert("March")
+            } else {
+              if (mes == 4) {
+                alert("April")
+              } else {
+                if (mes == 5) {
+                  alert("May")
+                } else {
+                  if (mes == 6) {
+                    alert("June")
+                  } else {
+                    if (mes == 7) {
+                      alert("July")
+                    } else {
+                      if (mes == 8) {
+                        alert("August")
+                      } else {
+                        if (mes == 9) {
+                          alert("September")
+                        } else {
+                          if (mes == 10) {
+                            alert("October")
+                          } else {
+                            if (mes == 11) {
+                              alert("November")
+                            } else {
+                              if (mes == 12) {
+                                alert("December")
+                              } else {
+                                alert("Você digitou algo errado! Digite algo entre 1 e 12")
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <h4>[44]Media e se passou ou nao!
+      <button onclick="jucas()">Clique e escreva sua nota!</button>
+    </h4>
+    <script>function jucas() {
+        var media = Number(prompt("Qual sua nota?"))
+
+        if (media >= 7) {
+          alert("Mano juca Você passou, e esta acima da media!!!")
+        } else {
+          if (media < 7) {
+            alert("Você não passou, esta abaixo da media!!!")
+          }
+        }
+
+      }
+    </script>
+
+    <hr>
+    <h3>12 de Abril</h3>
+    <h4>[39]Atividades com if
+      <!-- Como usar if:  -->
+      <button onclick="parquinho()">Entra ou nao na montanha russa?</button>
+      <button onclick="exercicio51()">Identificador de senha</button>
+      <button onclick="exercicio52()">Comparando numeros</button>
+      <button onclick="exercicio53()">Rodizio de carros</button>
+      <button onclick="exercicio54()">Evento,sala e local...</button>
+    </h4>
+    <script>
+      function parquinho() {
+        var altura
+        altura = Number(prompt("Digite sua altura em Centimetros:"))
+
+        if (altura > 150) {
+          alert("Vc pode entrar!!")
+        }//else or
+        if (altura <= 150) {
+          alert("Vc NÃO pode entrar!!")
+        }
+      }
+
+      function exercicio51() {
+        var senha
+        senha = Number(prompt("Digite a senha de 4 digitos!!"))
+        if (senha == 1234) {
+          alert("Acesso permitido!!")
+        }
+        else//or if(senha!=1234)
+        {
+          alert("Acesso negado! :(")
+        }
+      }
+
+      function exercicio52() {
+        var a = Number(prompt("DIgite o primeiro numero!!!")),
+          b = Number(prompt("Digite o segundo numero"))
+
+        if (a > b) {
+          alert("O numero " + a + " é maior que o numero " + b)
+        }
+        else {
+          if (b > a) {
+            alert("O numero " + b + " é maior que o numero " + a)
+          }
+          else {
+            if (a == b) {
+              alert("Os dois numeros sao iguais")
+            }
+          }
+        }
+      }
+
+      function exercicio53() {
+        var placa = Number(prompt("Qual o ultimo numero da sua placa?"))
+
+        if (placa == 1 || placa == 0) {
+          alert("Seu carro nao pode sair na segunda")
+        }
+        if (placa == 2 || placa == 3) {
+          alert("Seu carro nao pode sair na Terça")
+        }
+        if (placa == 4 || placa == 5) {
+          alert("Seu carro nao pode sair na quarta")
+        }
+        if (placa == 6 || placa == 7) {
+          alert("Seu carro nao pode sair na quinta")
+        }
+        if (placa == 8 || placa == 9) {
+          alert("Seu carro nao pode sair na sexta")
+        }
+        if (placa < 0 || placa > 9) {
+          alert("APERTA NO BOTAO DE NOVO E \nFAZ DE NOVO CABEÇUDOOOO!!! \nDesculpa me exaltei :) ")
+        }
+      }
+      function exercicio54() {
+        var palestra = Number(prompt("Qual numero da sua palestra?"))
+        if (palestra == 1) {
+          alert("Evento: Animaçoes Scratcht \nLocal: laboratorio 305 \n Horario: 19h ")
+        }
+        if (palestra == 2) {
+          alert("Evento: Scratcht para gamers \nLocal: laboratorio 512 \n Horario: 20h ")
+        }
+        if (palestra == 3) {
+          alert("Evento: JavaScript para leigos \nLocal: laboratorio 101 \n Horario: 19h ")
+        }
+        if (palestra == 4) {
+          alert("Evento: Topicos avançados de JavaScript \nLocal: laboratorio 305 \n Horario: 20h ")
+        }
+        if (palestra == 5) {
+          alert("Evento: Vida e Carreira \nLocal: Auditorio \n Horario: 21h ")
+        }
+      }</script>
+
+    <hr>
+    <h3>7 de Abril</h3>
+    <h4>[35]Calculos com porcentagem
+      <button onclick="exercicio5()">Antecessor e afins</button>
+      <button onclick="exercicio6()">Area do retangulo</button>
+      <button onclick="exercicio7()">Idade em anos</button>
+      <button onclick="exercicio8()">Votos de madureira</button>
+      <button onclick="exercicio9()">Reajuste salarial</button>
+      <button onclick="exercicio10()">Custo final de um carro</button>
+      <button onclick="exercicio11()">Salario de um vendedor de carro</button>
+    </h4>
+    <script>
+      function exercicio5() {
+        var numero, antecessor
+
+        numero = Number(prompt("Qual numero vc deseja saber o antecessor?"))
+
+        antecessor = numero - 1
+        alert("O antecessor é: " + antecessor)
+      }
+
+      function exercicio6() {
+        var base, altura, conta
+        base = Number(prompt("Qual valor da base?"))
+        altura = Number(prompt("Qual o valor da altura?"))
+        conta = base * altura
+        alert("A area do triangulo é: " + conta)
+      }
+
+      function exercicio7() {
+        var anos, mes, dias, calculo1, calculo2, soma
+
+        anos = prompt("Ha quantos anos vc nasceu?")
+        mes = prompt("E meses?")
+        dias = prompt("E dias?")
+
+        anos = Number(anos)
+        mes = Number(mes)
+        dias = Number(dias)
+
+        calculo1 = anos * 365
+        calculo2 = mes * 30
+        soma = calculo1 + calculo2 + dias
+
+        alert("Vc nasceu a " + soma + "dias!!! Seu velho")
+      }
+
+      function exercicio8() {
+        var eleitores, nulos, brancos, validos, total
+        var percbrancos, percnulos, percvalidos
+
+        brancos = prompt("Qantos votos brancos?")
+        nulos = prompt("quantos brancos nulos?")
+        validos = prompt("Quantos votos validos?")
+
+        brancos = Number(brancos)
+        nulos = Number(nulos)
+        validos = Number(validos)
+
+        total = brancos + nulos + validos
+
+        percbrancos = (brancos / total) * 100
+        percnulos = (nulos / total) * 100
+        percvalidos = (validos / total) * 100
+
+        alert("Com o total de " + total + " de eleitores, essa eleiçao teve o percentual de \n" +
+          percbrancos + "% de votos em branco \n" + percnulos + "% de votos nulos  \n" + percvalidos + "% de votos validos \n ficou bom???")
+
+      }
+
+      function exercicio9() {
+        var salario, reajuste, salario_novo
+        var reajusteReais
+
+        salario = prompt("Quanto vc ganha atualmente?")
+        reajuste = prompt("Qual o valor do percentual de ajuste? *digite com ponto no lugar da virgula")
+        salario = Number(salario)
+        reajuste = Number(reajuste)
+
+        reajusteReais = (reajuste / 100) * salario
+        salario_novo = salario + reajusteReais
+        alert("O salario novo é: R$ " + salario_novo)
+      }
+
+      function exercicio10() {
+        var valor_fabrica, percdistribuidor, percimpostos, calculo1
+
+        valor_fabrica = Number(prompt("Qual o valor de fabrica do carro?"))
+        percdistribuidor = (valor_fabrica * 28) / 100
+        percimpostos = (valor_fabrica * 45) / 100
+
+        calculo1 = valor_fabrica + percdistribuidor + percimpostos
+        alert("O custo final do carro é de R$" + calculo1.toFixed(2))
+      }
+
+      function exercicio11() {
+        var carros_vendidos, salario_fixo, vcarro, comissao, salario_final
+
+        salario_fixo = Number(prompt("Qual o salario fixo?"))
+        carros_vendidos = Number(prompt("Quantos carros ele vendeu?"))
+        vcarro = Number(prompt("Qual valor total das vendas?"))
+        comissao = Number(prompt("Quanto de comissao vc ganha por carro vendido?"))
+
+        salario_final = salario_fixo + (comissao * carros_vendidos) + vcarro * 5 / 100
+
+        alert("O salario fixo: R$" + salario_fixo.toFixed(2) +
+          "\n Carros vendidos: " + carros_vendidos +
+          "\n Comissao por carro: R$" + comissao.toFixed(2)
+          + "\ntotal De vendas: R$" + vcarro.toFixed(2) +
+          "\n Salario final: R$" + salario_final.toFixed(2))
+      }
+    </script>
+
+    <hr>
+    <h3> 5 de Abril</h3>
+    <h4>[31]Salrio com Comissão <button onclick="vendedor()">Clique aqui</button></h4>
+    <script>
+      function vendedor() {
+        var salario, vendas, valorvendas
+        var cal1, cal2
+        salario = Number(prompt("Qual seu salario fixo?"))
+        vendas = Number(prompt("Qual o valor total de vendas?"))
+        cal1 = vendas * 15 / 100
+        cal2 = salario + cal1
+        alert("TOTAL= R$" + cal2.toFixed(2))
+      }
+    </script>
+
+    <h4>[32]Gasto por km <button onclick="gastocombustivel()">Clique aqui</button></h4>
+    <script>
+      function gastocombustivel() {
+        var horas, kmh, kml = 12
+        var distancia, gasto
+        horas = Number(prompt("Quantas horas de viagem?"))
+        kmh = Number(prompt("Qual a velocidade media do transporte?"))
+        distancia = kmh * horas
+        gasto = distancia / kml
+        alert(gasto.toFixed(3))
+      }
+    </script>
+
+    <h4>[33] Calculos sobre Salario <button onclick="manojuca3a()">Clique aqui!</button></h4>
+    <script>
+      function manojuca3a() {
+        var horastrabalhadas, valorhora, percdesconto
+        var salbruto, desconto, salliquido
+
+        horastrabalhadas = Number(prompt("Quantas horas vc trabalhou?"))
+        valorhora = Number(prompt("Quanto vc recebe por hora?"))
+        percdesconto = Number(prompt("Qual é p percentual de desconto?"))
+
+        salbruto = horastrabalhadas * valorhora
+        desconto = (percdesconto / 100) * salbruto
+        salliquido = salbruto - desconto
+        alert("Horas trabalhadas= " + horastrabalhadas +
+          "\nSalario bruto= R$" + salbruto +
+          "\nDesconto= R$" + desconto +
+          "\nSALARIO LIQUIDO= R$" + salliquido)
+      }
+    </script>
+
+    <hr>
+    <h3>31 de Março</h3>
+    <h4>[26]Area circulo <button onclick="exercicio20()">Clique aqui!</button></h4>
+    <script>
+      function exercicio20() {
+        var area, raio
+        var pi = 3.14159
+        raio = prompt("Qual o valor do raio do circulo?")
+        raio = Number(raio)
+        area = pi * raio * raio
+        alert("A area desse circulo é: " + area.toFixed(4))
+      }
+    </script>
+
+
+    <h4>[27]Diferança entre 4 numeros <button onclick="diferanca()">Clique aqui!</button></h4>
+
+    <script>
+      function diferanca() {
+        var a, b, c, d
+        var diferanca
+        a = Number(prompt("Valor de A?"))
+        b = Number(prompt("Valor de B?"))
+        c = Number(prompt("Valor de C?"))
+        d = Number(prompt("Valor de D?"))
+        diferanca = (a * b - c * d)
+        alert("A diferença é: " + diferanca)
+      }
+    </script>
+
+    <h4>[28]Soma <button onclick="prod()">Clique aqui!</button></h4>
+
+    <script>
+      function prod() {
+        var a, b, produto
+        a = Number(prompt("Valor de A?"))
+        b = Number(prompt("Valor de B?"))
+        produto = a * b
+        alert("PROD = " + produto)
+      }
+    </script>
+
+    <h4>[29]Salario por hora <button onclick="salarionum()">Clique aqui!</button></h4>
+
+    <script>
+      function salarionum() {
+        var num = prompt("Numero do funcionario?"), salario, horas = Number(prompt("Quantas horas mensais vc trabalha?")),
+          valor_por_hora = Number(prompt("Quanto vc ganha por hora?"))
+        salario = valor_por_hora * horas
+        alert("NUMBER = " + num + "\n SALARIO = U$ " + salario.toFixed(2))
+      }
+    </script>
+
+
+    <hr>
+    <h3>24 de Março</h3>
+    <h4>[18]Calculos 2
+      <button onclick="exercicio5()">5 - Numero antecessor</button>
+      <button onclick="exercicio6()">6 - Area Retangulo</button>
+      <button onclick="exercicio7()">7 - Idade em dias</button>
+      <button onclick="exercicio8()">8 - Percentual de votos</button>
+      <button onclick="exercicio9()">9 - Percentual de reajuste Salarial</button>
+      <button onclick="Exercicio10()">10 - Media de cinco notas</button>
+      <button onclick="exercicio11()">11 - Media de saltos</button>
+    </h4>
+
+    <script>
+
+      function exercicio5() {
+        var numero, antecessor
+
+        numero = prompt("Qual valor do numero?")
+        numero = Number(numero)
+
+        antecessor = numero - 1
+        alert("Seu antecessor é: " + antecessor)
+      }
+
+      function exercicio6() {
+        var base, altura, calculo
+
+        base = prompt("Qual o valor da base do retangulo?")
+        altura = prompt("Qual o valor da altura do retangulo?")
+
+        base = Number(base)
+        altura = Number(altura)
+
+        calculo = (base * altura) / 2
+        alert("O valor da area desse retangulo é: " + calculo)
+      }
+
+      function exercicio7() {
+        var anos, mes, dias, calculo1, calculo2, soma
+
+        anos = prompt("Ha quantos anos vc nasceu?")
+        mes = prompt("E meses?")
+        dias = prompt("E dias?")
+
+        anos = Number(anos)
+        mes = Number(mes)
+        dias = Number(dias)
+
+        calculo1 = anos * 365
+        calculo2 = mes * 30
+        soma = calculo1 + calculo2 + dias
+
+        alert("Vc nasceu a " + soma + "dias!!! Seu velho")
+      }
+
+      function exercicio8() {
+        var eleitores, nulos, brancos, validos, total
+        var percbrancos, percnulos, percvalidos
+
+        brancos = prompt("Qantos votos brancos?")
+        nulos = prompt("quantos brancos nulos?")
+        validos = prompt("Quantos votos validos?")
+
+        brancos = Number(brancos)
+        nulos = Number(nulos)
+        validos = Number(validos)
+
+        total = brancos + nulos + validos
+
+        percbrancos = (brancos / total) * 100
+        percnulos = (nulos / total) * 100
+        percvalidos = (validos / total) * 100
+
+        alert("Com o total de " + total + " de eleitores, essa eleiçao teve o percentual de \n" +
+          percbrancos + "% de votos em branco \n" + percnulos + "% de votos nulos  \n" + percvalidos + "% de votos validos \n ficou bom???")
+
+      }
+
+      function exercicio9() {
+        var salario, reajuste, salario_novo
+        var reajusteReais
+
+        salario = prompt("Quanto vc ganha atualmente?")
+        reajuste = prompt("Qual o valor do percentual de ajuste? *digite com ponto no lugar da virgula")
+        salario = Number(salario)
+        reajuste = Number(reajuste)
+
+        reajusteReais = (reajuste / 100) * salario
+        salario_novo = salario + reajusteReais
+        alert("O salario novo é: R$ " + salario_novo)
+      }
+
+      function Exercicio10() {
+        var nota5, nota4, nota3, nota2, nota1
+        var media
+
+        nota1 = prompt("Qual o valor da primeira nota?")
+        nota2 = prompt("Qual o valor da secunda nota?")
+        nota3 = prompt("Qual o valor da terceira nota?")
+        nota4 = prompt("Qual o valor da quarta nota?")
+        nota5 = prompt("Qual o valor da quinta nota?")
+
+        nota1 = Number(nota1)
+        nota2 = Number(nota2)
+        nota3 = Number(nota3)
+        nota4 = Number(nota4)
+        nota5 = Number(nota5)
+
+        media = (nota1 + nota2 + nota3 + nota4 + nota5) / 5
+        alert("A media é de: " + media)
+      }
+
+      function exercicio11() {
+        var atleta, slt1, slt2, slt3, slt4, slt5
+        var media
+
+        atleta = prompt("qual o nome do atleta?")
+        slt1 = prompt("Quanto foi o primeiro salto? *digite com ponto no lugar da virgula")
+        slt2 = prompt("Quanto foi o segundo salto? *digite com ponto no lugar da virgula")
+        slt3 = prompt("Quanto foi o terceiro salto? *digite com ponto no lugar da virgula")
+        slt4 = prompt("Quanto foi o quarto salto? *digite com ponto no lugar da virgula")
+        slt5 = prompt("Quanto foi o quinto salto? *digite com ponto no lugar da virgula")
+
+        slt1 = Number(slt1)
+        slt2 = Number(slt2)
+        slt3 = Number(slt3)
+        slt4 = Number(slt4)
+        slt5 = Number(slt5)
+
+        media = (slt1 + slt2 + slt3 + slt4 + slt5) / 5
+
+        alert("Atleta:" + atleta +
+          "\n Primeiro Salto: " + slt1 + "M" +
+          "\n Segundo Salto: " + slt2 + "M" +
+          "\n Terceiro Salto: " + slt3 + "M" +
+          "\n Quarto Salto: " + slt4 + "M" +
+          "\n Quinto Salto: " + slt5 + "M" +
+          "\n ------Resultado Final-----" +
+          "\n Atleta: " + atleta +
+          "\n Saltos: " + slt1 + " - " + slt2 + " - " + slt3 + " - " + slt4 + " - " + slt5 +
+          "\n Media dos Saltos: " + media
+        )
+      }
+    </script>
+
+    <h4>[20]Desafio <button onclick="desafio()">Saber quanto vc tem na carteira perguntando <br>o valor e a quantidade
+        de
+        cada nota</button></h4>
+
+    <script>
+      function desafio() {
+        var nt2, nt5, nt10, nt20, nt50, nt100, nt200
+        var conta
+
+        nt2 = Number(prompt("Quantas notas de R$2,00?"))
+        nt5 = Number(prompt("Quantas notas de R$5,00?"))
+        nt10 = Number(prompt("Quantas notas de R$10,00?"))
+        nt20 = Number(prompt("Quantas notas de R$20,00?"))
+        nt50 = Number(prompt("Quantas notas de R$50,00?"))
+        nt100 = Number(prompt("Quantas notas de R$100,00?"))
+        nt200 = Number(prompt("Quantas notas de R$200,00?"))
+
+        conta = (nt2 * 2) + (nt5 * 5) + (nt10 * 10) + (nt20 * 20) + (nt50 * 50) + (nt100 * 100) + (nt200 * 200)
+        alert("Você tem R$" + conta + ",00 \n Parabens vc é rico")
+      }
+    </script>
+
+    <h4>[21]Carros <button onclick="carrinhos()">Compara qual o melhor carro</button></h4>
+    <script>
+      function carrinhos() {
+        var c1, c2, c3, c4, c5
+        var kml1, kml2, kml3, kml4, kml5
+        var ltr1, ltr2, ltr3, ltr4, ltr5
+        var pilas1, pilas2, pilas3, pilas4, pilas5
+        var preçodagasolina
+        var qkm
+
+        qkm = Number(prompt("Qual os km da viagem?"))
+        preçodagasolina = Number(prompt("Quanto custa a gasolina?"))
+
+        c1 = prompt("nome do carro 1: ")
+        kml1 = Number(prompt("Consumo do carro 1: "))
+        ltr1 = qkm / kml1
+        pilas1 = ltr1 * preçodagasolina
+
+        c2 = prompt("Nome do carro 2: ")
+        kml2 = Number(prompt("Consumo do carro 2: "))
+        ltr2 = qkm / kml2
+        pilas2 = ltr2 * preçodagasolina
+
+        c3 = prompt("Nome do carro 3: ")
+        kml3 = Number(prompt("Consumo do carro 3:"))
+        ltr3 = qkm / kml3
+        pilas3 = ltr3 * preçodagasolina
+
+        c4 = prompt("Nome do carro 4: ")
+        kml4 = Number(prompt("Consumo do carro 4: "))
+        ltr4 = qkm / kml4
+        pilas4 = ltr4 * preçodagasolina
+
+        c5 = prompt("Nome do carro 5: ")
+        kml5 = Number(prompt("Consumo do carro 5: "))
+        ltr5 = qkm / kml5
+        pilas5 = ltr5 * preçodagasolina
+
+
+        alert("Resultados finais  \n1  -  " + c1 + "           -  " + kml1 +
+          "Km/l  -  " + ltr1.toFixed(2) + " litros  -  R$" + pilas1.toFixed(2) + "\n2  -  " + c2 + "           -  " + kml2 +
+          "Km/l -  " + ltr2.toFixed(2) + " litros  -  R$" + pilas2.toFixed(2) + "\n3  -  " + c3 + "           -  " + kml3 +
+          "Km/l  -  " + ltr3.toFixed(2) + " litros  -  R$" + pilas3.toFixed(2) + "\n4  -  " + c4 + "           -  " + kml4 +
+          "Km/l -  " + ltr4.toFixed(2) + " litros  -  R$" + pilas4.toFixed(2) + "\n5  -  " + c5 + "           -  " + kml5 +
+          "Km/l  -  " + ltr5.toFixed(2) + " litros  -  R$" + pilas5.toFixed(2))
+      }
+    </script>
+
+    <h4>[23]Saidera <button onclick="saidera()">Media de consumo de um carro <br>com base nos km e gasolina</button>
+    </h4>
+
+    <script>
+      function saidera() {
+        var distancia, consumo, combustivel
+        var consumo
+        distancia = Number(prompt("Quantos Kms vc andou ?"))
+        combustivel = Number(prompt("Quantos litros de combustivel foram gastos?"))
+        consumo = distancia / combustivel
+        alert(consumo.toFixed(3) + " Km/l")
+      }
+    </script>
+
+    <hr>
+
+    <h3>[17] Temperaturas - 17 de Março</h3>
+    <button onclick="exercicio41()">4.1 - Celsius para Fahrenheit</button>
+    <button onclick="exercicio42()">4.2 - Celsius para kelvin</button>
+    <button onclick="exercicio43()">4.3 - Fahrenheit para Celsius</button>
+    <button onclick="exercicio44()">4.4 - Fahrenheit para kelvin</button>
+    <button onclick="exercicio45()">4.5 - Kelvin para Celsius</button>
+    <button onclick="exercicio46()">4.6 - Kelvin para Fahrenheit</button>
+
+    <script>
+      function exercicio41() {
+        var gcelsius
+        var conversao
+        gcelsius = prompt(" Quantos Graus Celcius esta fazendo? ")
+        gcelsius = Number(gcelsius)
+        conversao = gcelsius * 1.8 + 32
+        alert("Convertendo o valor de Celsius para fahrenheit temos " + conversao + " graus.")
+
+      }
+
+      function exercicio42() {
+        var gcelsius
+        var conversao
+        gcelsius = prompt(" Quantos Graus Celcius esta fazendo? ")
+        gcelsius = Number(gcelsius)
+        conversao = gcelsius + 273.15
+        alert("Convertendo o valor de Celsius para kelvin, temos " + conversao + " graus kelvin.")
+      }
+
+      function exercicio43() {
+        var Fahrenheit
+        var conversao
+        Fahrenheit = prompt(" Quantos Graus fahrenheit esta fazendo? ")
+        Fahrenheit = Number(Fahrenheit)
+        conversao = Fahrenheit - 32 / 1.8
+        alert("Convertendo o valor de Fahrenheit para celsius, temos " + conversao + " graus celsius.")
+      }
+
+      function exercicio44() {
+        var Fahrenheit
+        var conversao
+        Fahrenheit = prompt(" Quantos Graus fahrenheit esta fazendo? ")
+        Fahrenheit = Number(Fahrenheit)
+        conversao = Fahrenheit + 459, 67 / 1.8
+        alert("Convertendo o valor de Fahrenheit para kelvin, temos " + conversao + " graus kelvin.")
+      }
+
+      function exercicio45() {
+        var kelvin
+        var conversao
+        kelvin = prompt(" Quantos Graus kelvin esta fazendo? ")
+        kelvin = Number(kelvin)
+        conversao = kelvin - 273.15
+        alert("Convertendo o valor de kelvin para celsius, temos " + conversao + " graus celsius.")
+      }
+
+      function exercicio46() {
+        var kelvin
+        var conversao
+        kelvin = prompt(" Quantos Graus kelvin esta fazendo? ")
+        kelvin = Number(kelvin)
+        conversao = kelvin * 1.8 - 459.67
+        alert("Convertendo o valor de kelvin para celsius, temos " + conversao + " graus celsius.")
+      }
+    </script>
+
+    <hr>
+    <h3>[13] Calculos de area - 15 de Março</h3>
+    <button onclick="exercicio3a()">3.1 - Calculo de area</button>
+    <button onclick="exercicio3b()">3.2 - Calculo de area do triangulo</button>
+    <button onclick="exercicio3c()">3.4 - Soma dos quadrados</button>
+    <button onclick="exercicio3d()">3.6 - Raiz quadrada</button>
+    <button onclick="exercicio3e()">3.7 - Media duas notas</button><br>
+    <a href="atividade 3.html">Atividade3.8</a>
+    <a href="atividade39.html">Atividade3.9</a>
+    <a href="atividade310.html">Atividade3.10</a>
+
+    <script>
+      function exercicio3a() {
+        var area, raio
+        var pi = 3.14159
+
+        raio = prompt("Qual o valor do raio do circulo?")
+        raio = Number(raio)
+
+        area = pi * raio * raio
+        alert("A area desse circulo é: " + area)
+      }
+
+      function exercicio3b() {
+        var altura, base, area
+
+        altura = prompt("Qual é a altura do triangulo?")
+        base = prompt("Qual o valor da base desse triangulo?")
+
+        altura = Number(altura)
+        base = Number(base)
+
+        area = (base * altura) / 2
+        alert("A area desse triangulo é: " + area)
+      }
+
+      function exercicio3c() {
+        var numero1, numero2
+        var quadrado, area1, area2, soma
+
+        numero1 = prompt("Qual o valor do primeiro numero inteiro?")
+        numero2 = prompt("Qual o valor do segundo numero inteiro?")
+        numero2 = Number(numero2)
+        numero1 = Number(numero1)
+
+        area1 = numero1 ** 2
+        area2 = numero2 ** 2
+        soma = area1 + area2
+        alert("a soma dos quadrados desses numeros é: " + soma)
+
+      }
+
+      function exercicio3d() {
+        var numero, raiz, quadrado
+
+        numero = prompt("digite o numero:")
+        numero = Number(numero)
+
+        quadrado = numero * numero
+        raiz = Math.sqrt(numero)
+
+        alert("Numero: " + numero + "\nquadrado: " + quadrado + "\nRaiz quadrada: " + raiz)
+      }
+
+      function exercicio3e() {
+        var n1, n2
+        var Media
+
+        n1 = prompt("Nota da primeira prova?")
+        n2 = prompt("Nota da segunda prova?")
+        n1 = Number(n1)
+        n2 = Number(n2)
+
+        media = (n1 + n2) / 2
+        alert("A media desses numeros é: " + media)
+      }
+    </script>
+
+    <!-- dia 8 de março -->
+    <hr>
+    <h3>[10] Contas simples - 8 de Março</h3>
+    <button onclick="exercicio2a()">2.a - Salario diario </button>
+    <button onclick="exercicio2b()">2.b - Conta da Cantina 1</button>
+    <button onclick="exercicio2c()">2.c - Media quatro notas</button>
+    <button onclick="exercicio2d()">2.d - Pontuaçao do Time</button>
+    <button onclick="exercicio2e()">2.e - Conta da Cantina </button>
+    <button onclick="exercicio2f()">2.f - Dano de jogo </button>
+    <button onclick="exercicio2g()">2.g - bonus de jogo</button>
+    <button onclick="exercicio2h()">2.h - Media notas com peso</button>
+    <button onclick="exercicio2i()">2.i - Gastos mensais</button>
+    <button onclick="exercicio2j()">2.j - Conta da Cantina 3</button>
+    <button onclick="exercicio2k()">2.k - Cafe por estudante</button>
+    <button onclick="exercicio2l()">2.l - Cafe por estudante Extra</button>
+
+    <script>
+      function exercicio2a() {
+        var salario, dias
+        var salario_diario
+
+        salario = prompt("Quantos vc ganha por mês?")
+        dias = prompt("Quantos dias vc trabalha por mês?")
+
+        salario = Number(salario)
+        dias = Number(dias)
+
+        salario_diario = salario / dias
+        alert("Salario diario é de: " + salario_diario)
+      }
+
+      function exercicio2b() {
+        var café, coxinha, doce, Pão
+        var conta_da_cantina
+
+        café = prompt("Quanto custou seu café?")
+        coxinha = prompt("Quanto custou sua coxinha?")
+        doce = prompt("Quanto custou seu doce?")
+        Pão = prompt("Quanto custou seu Pão")
+
+        café = Number(café)
+        coxinha = Number(coxinha)
+        doce = Number(doce)
+        Pão = Number(Pão)
+
+        conta_da_cantina = café + coxinha + doce + Pão
+        alert("Conta da cantina: " + conta_da_cantina)
+      }
+
+      function exercicio2c() {
+        var n1, n2, n3, n4
+        var soma
+        var media
+
+        n1 = prompt("Nota primeira prova?")
+        n2 = prompt("Nnota segunda prova?")
+        n3 = prompt("Nota terceira prova?")
+        n4 = prompt("Nota quarta prova?")
+
+        n1 = Number(n1)
+        n2 = Number(n2)
+        n3 = Number(n3)
+        n4 = Number(n4)
+        soma = n1 + n2 + n3 + n4
+        media = soma / 4
+        alert("A Media final é: " + media)
+
+      }
+
+      function exercicio2d() {
+        var vitorias, empates
+        var pontuação
+        var multiplicaçao
+
+        vitorias = prompt("Quantas vitorias o time teve?")
+        empates = prompt("Quantos empates o time teve?")
+
+        vitorias = Number(vitorias)
+        empates = Number(empates)
+
+        multiplicaçao = vitorias * 3
+        pontuação = multiplicaçao + empates
+        alert("A pontuaçao do time é: " + pontuação)
+      }
+
+      function exercicio2e() {
+        var café, coxinha, doce, Pão
+        var conta_da_cantina_2
+
+        café = prompt("Quanto custou seu café?")
+        coxinha = prompt("Quanto custou sua coxinha?")
+        doce = prompt("Quanto custou seu doce?")
+        Pão = prompt("Quanto custou seu Pão")
+
+        café = Number(café)
+        coxinha = Number(coxinha)
+        doce = Number(doce)
+        Pão = Number(Pão)
+
+        conta_da_cantina_2 = 2 * café + coxinha + doce + Pão
+        alert("Conta da cantina: " + conta_da_cantina_2)
+      }
+
+      function exercicio2f() {
+        var dano
+        var total
+
+        dano = prompt("Quanto de dano vc levou?")
+
+        dano = Number(dano)
+
+        total = 1.5 * dano
+
+        alert("O total de dano é: " + total)
+      }
+
+      function exercicio2g() {
+        var dano
+        var bonus
+        var total
+
+        dano = prompt("Quanto de dano vc levou?")
+        bonus = prompt("Quanto de bonus?")
+        dano = Number(dano)
+        bonus = Number(bonus)
+
+        total = bonus + dano * 1.5
+        alert("O total de dano é: " + total)
+      }
+
+      function exercicio2h() {
+        var n1, n2
+        var p1, p2
+        var total
+
+        n1 = prompt("Nota primeira prova?")
+        p1 = prompt("Qual o peso da primeira prova?")
+        n2 = prompt("Nota segunda prova?")
+        p2 = prompt("Qual o peso da segunda prova?")
+
+        n1 = Number(n1)
+        n2 = Number(n2)
+        p1 = Number(p1)
+        p2 = Number(p2)
+
+        total = (n1 * p1 + n2 * p2) / (p1 + p2)
+        alert("A media final é: " + total)
+      }
+
+      function exercicio2i() {
+        var salario
+        var agua, aluguel, luz, internet, gasolina, netflix, telefone, outros
+        var sobras
+
+        salario = prompt("Quanto de salario vc ganha?")
+        agua = prompt("Quanto vc paga de agua?")
+        aluguel = prompt("Quanto vc paga de aluguel?")
+        luz = prompt("Quanto vc paga de luz?")
+        internet = prompt("Quanto vc paga de internet?")
+        gasolina = prompt("Quanto vc paga de gasolina?")
+        netflix = prompt("Quanto vc paga de netflix? ")
+        telefone = prompt("Quanto vc paga de telefone?")
+        outros = prompt("Quanto vc tem de gastos diversos? ")
+
+        agua = Number(agua)
+        aluguel = Number(aluguel)
+        luz = Number(luz)
+        internet = Number(internet)
+        gasolina = Number(gasolina)
+        netflix = Number(netflix)
+        telefone = Number(telefone)
+        outros = Number(outros)
+
+        sobras = salario - (aluguel + agua + luz + telefone + internet + gasolina + netflix + outros)
+        alert("O resto do seu salario é: " + sobras)
+      }
+
+      function exercicio2j() {
+        var café, coxinha, halls, doce_de_leite
+        var conta_da_cantina_3
+
+        café = prompt("Quanto custou seu café?")
+        coxinha = prompt("Quanto custou sua coxinha?")
+        halls = prompt("Quanto custou a halls?")
+        doce_de_leite = prompt("Quanto custou seu doce de leite?")
+
+        café = Number(café)
+        coxinha = Number(coxinha)
+        halls = Number(halls)
+        doce_de_leite = Number(doce_de_leite)
+
+        conta_da_cantina_3 = 3 * café + coxinha + halls + 2 * doce_de_leite
+        alert("Conta da cantina: " + conta_da_cantina_3)
+      }
+
+      function exercicio2k() {
+        var coffee
+        var students
+        var calculo
+
+        coffee = prompt("Quantos copos de cafe tem?")
+        students = prompt("Quantos estudantes querem café?")
+
+        coffe = Number(coffee)
+        students = Number(students)
+
+        calculo = coffee / students
+        alert("Temos " + calculo + " copos de café para cada estudante...")
+
+      }
+
+      function exercicio2l() {
+        var coffee
+        var students
+        var calculo
+        var extra
+
+        coffee = prompt("Quantos copos de cafe tem na cantina?")
+        extra = prompt("Quantos copos foram trazidos do supermercado?")
+        students = prompt(" E quantos estudantes querem café?")
+
+        coffee = Number(coffee)
+        extra = Number(extra)
+        students = Number(students)
+
+        calculo = (coffee + extra) / students
+        alert("Temos " + calculo + " copos de café para cada estudante...")
+      }
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

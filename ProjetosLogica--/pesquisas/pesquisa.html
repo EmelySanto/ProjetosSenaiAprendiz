@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        @import url(css.css);
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <center>
+            <h1>≪•❈•≫Pesquisa≪•❈•≫</h1>
+        </center>
+
+        <div class="row">
+            <div class="col-md-6">
+
+                <h4>Digite a palavra desejada!</h4>
+                <input type="text" id="palavra" onkeyup="buscar()" aria-placeholder="Digite uma palavra">
+                <button onclick="buscar()">Confirmar</button>
+                <div id="mostrar"></div>
+                <script src="pesquisa.js"></script>
+            </div>
+            <div class="col-md-6">
+                <h4>Cadastre Aqui!</h4>
+
+                <input id="aé" type="text" placeholder="Digite Aqui...">
+                <button onclick="cadastro"></button>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <input type="text" id="buscar">
+    <button onclick="pesquisar()">PESQUISAR</button>
+    <div id="principal"></div> -->
+</body>
+
+</html>
